@@ -1,7 +1,8 @@
-host="zm_tianqi02v.add.zwt.qihoo.net zm_tianqi03v.add.zwt.qihoo.net zm_tianqi04v.add.zwt.qihoo.net zm_tianqi05v.add.zwt.qihoo.net zm_tianqi06v.add.zwt.qihoo.net zm_tianqi01v.add.bjsc.qihoo.net zm_tianqi02v.add.bjsc.qihoo.net zm_tianqi03v.add.bjsc.qihoo.net zm_tianqi04v.add.bjsc.qihoo.net"
-#host="zm_tianqi05v.add.zwt.qihoo.net"
+host="host1 host2 host3"
 for h in ${host}
 do
 	echo work@$h
+	#WHICH is args for deploy-roolback.sh ,can use $WHICH in deploy-rollback.sh
+	# refer http://stackoverflow.com/questions/305035/how-to-use-ssh-to-run-shell-script-on-a-remote-machine
 	ssh work@$h WHICH=$1 'bash -s' < deploy-rollback.sh
 done
