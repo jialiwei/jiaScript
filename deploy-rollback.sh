@@ -1,4 +1,4 @@
-cd ~/tools/tomcat-tq360
+cd ~/tools/tomcat
 
 echo "Killing tomcat..."
 echo $WHICH
